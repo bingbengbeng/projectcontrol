@@ -7,7 +7,6 @@ import {
   writeConfigRequest,
   useConfigInMainRequest,
 } from "secure-electron-store";
-import "./motd.css";
 
 class Motd extends React.Component {
   constructor(props) {

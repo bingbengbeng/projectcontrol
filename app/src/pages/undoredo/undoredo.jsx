@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { UNDO, REDO, CLEAR, GROUPBEGIN, GROUPEND } from "easy-redux-undo";
 import { increment, decrement } from "Redux/components/counter/counterSlice";
 import { add, remove } from "Redux/components/complex/complexSlice";
-import "./undoredo.css";
 
 class UndoRedo extends React.Component {
   constructor() {
@@ -138,7 +137,7 @@ const mapStateToProps = (state, props) => ({
   complex: state.undoable.present.complex,
   past: state.undoable.past,
   present: state.undoable.present,
-  future: state.undoable.future
+  future: state.undoable.future,
 });
 const mapDispatch = {
   increment,
@@ -149,7 +148,7 @@ const mapDispatch = {
   REDO,
   CLEAR,
   GROUPBEGIN,
-  GROUPEND
+  GROUPEND,
 };
 
 export default connect(mapStateToProps, mapDispatch)(UndoRedo);
